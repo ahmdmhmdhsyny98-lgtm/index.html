@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Information Retrieval - Search Technology</title>
+
+    <meta name="description" content="Learn about Information Retrieval, search engines, indexing, crawling, and information search technology.">
+
+    <meta name="keywords" content="Information Retrieval, Search Engines, Indexing, Crawling, Inverted Index">
+
+    <meta name="author" content="Information Retrieval Website">
+
+    <meta name="robots" content="index, follow">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #263445;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #10243e;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #55aaff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #55aaff;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #10243e, #1765b5);
+            color: white;
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #55aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        section {
+            padding: 55px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #10243e;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #1765b5;
+            margin-bottom: 12px;
+        }
+
+        .process {
+            background: #e8f1fc;
+            text-align: center;
+        }
+
+        .process p {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        footer {
+            background: #10243e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>IR Technology</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#types">Index Types</a>
+            <a href="#process">Process</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Information Retrieval</h1>
+
+        <p>
+            Discover how search engines find, organize,
+            and retrieve useful information from millions
+            of documents across the internet.
+        </p>
+
+        <a href="#about" class="btn">Explore More</a>
+    </section>
+
+    <section id="about">
+
+        <h2 class="section-title">What is Information Retrieval?</h2>
+
+        <div class="about">
+            <p>
+                Information Retrieval (IR) is the process of
+                finding relevant information from a large
+                collection of documents or data.
+
+                Search engines use Information Retrieval
+                techniques to help users find accurate
+                and useful information quickly.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="types">
+
+        <h2 class="section-title">Types of Indexing</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Inverted Index</h3>
+                <p>
+                    Maps each term to a list of documents
+                    containing that term. It helps search
+                    engines retrieve information quickly.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Forward Index</h3>
+                <p>
+                    Maps each document to the list of
+                    terms it contains. It is useful
+                    during index construction.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Positional Index</h3>
+                <p>
+                    Stores the positions of terms inside
+                    documents, making phrase searching
+                    more efficient.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Biword Index</h3>
+                <p>
+                    Stores pairs of consecutive words
+                    to support phrase-based searching.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="process" id="process">
+
+        <h2 class="section-title">How Search Engines Work</h2>
+
+        <p>
+            Search engines generally use three main stages:
+            Crawling, Indexing, and Ranking.
+
+            Crawling discovers web pages.
+            Indexing analyzes and stores information
+            about those pages.
+            Ranking orders relevant results according
+            to the user's search query.
+        </p>
+
+    </section>
+
+    <section>
+        <h2 class="section-title">Why is Indexing Important?</h2>
+
+        <div class="about">
+            <p>
+                Indexing allows search engines to find
+                information faster instead of searching
+                every document from the beginning.
+
+                A well-organized index improves search
+                speed and helps users find relevant results.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Information Retrieval Website</p>
+        <p>Educational Project - 2026</p>
+    </footer>
+
+</body>
+</html>
